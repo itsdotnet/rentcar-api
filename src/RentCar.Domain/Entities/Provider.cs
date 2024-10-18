@@ -1,9 +1,10 @@
 using System;
+using RentCar.Domain.Commons;
 using RentCar.Domain.Enums;
 
 namespace RentCar.Domain.Entities;
 
-public class Provider
+public class Provider : Auditable
 {
     public string Name { get; set; }
     public string Description { get; set; }
