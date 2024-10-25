@@ -1,5 +1,6 @@
 using AutoMapper;
 using RentCar.Domain.Entities;
+using RentCar.Service.DTOs.Attachments;
 using RentCar.Service.DTOs.Booking;
 using RentCar.Service.DTOs.Cars;
 using RentCar.Service.DTOs.Providers;

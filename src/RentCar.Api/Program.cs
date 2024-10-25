@@ -1,3 +1,6 @@
+using RentCar.Service.Helpers;
+using RentCar.Service.Mappers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,7 +23,8 @@ var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
-
+PathHelper.WebRootPath = Path.GetFullPath("wwwroot");
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 app.MapGet("/weatherforecast", () =>
 {
     var forecast =  Enumerable.Range(1, 5).Select(index =>
